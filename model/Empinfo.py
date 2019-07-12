@@ -10,3 +10,4 @@ class Employee(db.Model): # this cls is a child of db.model .. sqlalchemy--orm
 
 print("changes from git")
 print("hello")
+print("direct change")
