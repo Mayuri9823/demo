@@ -1,4 +1,4 @@
-from empFlaskCrud.util.dbconfig import db
+from util.dbconfig import db
 
 
 class Employee(db.Model): # this cls is a child of db.model .. sqlalchemy--orm
