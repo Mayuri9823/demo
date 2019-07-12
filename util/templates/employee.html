@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Information.......!</title>
+</head>
+<body>
+<h1>{{msg}}</h1>
+
+<form action="http://localhost:5000/save/" method="POST">
+        <label>EmpId</label>
+        <input type="text" name="EmpId" value = {{entity.id}}><br><br>
+
+        <label>EmpName</label>
+        <input type="text" name="Empname" value = {{entity.name}}><br><br>
+
+        <label>EmpAge</label>
+        <input type="text" name="EmpAge" value = {{entity.age}}><br><br>
+
+        <label>EmpCity</label>
+        <input type="text" name="Empcity" value = {{entity.city}}><br><br>
+
+        <label>EmpSalary</label>
+        <input type="text" name="EmpSalary" value = {{entity.salary}}><br><br>
+
+        <input type="submit" name="Submit" value="Submit">
+</form>
+
+<table>
+        <thead>
+                <td>ID</td>
+                <td>NAME</td>
+                <td>AGE</td>
+                <td>City</td>
+                <td>Salary</td>
+                <td>Action</td>
+        </thead>
+    {% if Emplist %}
+    {% for Emp in Emplist %}
+            <tr>
+                <td>{{Emp.id}}</td>
+                <td>{{Emp.name}}</td>
+                <td>{{Emp.age}}</td>
+                <td>{{Emp.city}}</td>
+                <td>{{Emp.salary}}</td>
+                <td>
+                      <a href="{{ '/editemp/%s'%Emp.id }}">Edit</a>
+                    <a href="{{ '/deleteemp/%s'%Emp.id }}">Delete</a>
+
+                </td>
+            </tr>
+    {% endfor %}
+    {% endif %}
+
+</table>
+
+
+</body>
+</html>
