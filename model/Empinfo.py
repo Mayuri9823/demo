@@ -8,3 +8,4 @@ class Employee(db.Model): # this cls is a child of db.model .. sqlalchemy--orm
     city = db.Column('Emp_City', db.String(200))
     salary = db.Column('Emp_Salary', db.Integer)
 
+print("changes from git")
