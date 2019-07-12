@@ -5,7 +5,8 @@ class Employee(db.Model): # this cls is a child of db.model .. sqlalchemy--orm
     id = db.Column('Emp_ID', db.Integer, primary_key=True)
     name = db.Column('Emp_Name', db.String(100))
     age = db.Column('Emp_Age', db.Integer)
-    city = db.Column('Emp_City', db.String(200))
+    city = db.Column('Emp_', db.String(200))
     salary = db.Column('Emp_Salary', db.Integer)
 
 print("changes from git")
+print("hi")
